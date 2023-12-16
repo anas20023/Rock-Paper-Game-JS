@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <link href="./output/tailwind.css" rel="stylesheet">
+    <title>Rock Paper Game</title>
+</head>
+
+<body class="bg white dark:bg-gray-800">
+    <nav
+        class="flex flex-row w-11/12 max-w-screen-xl justify-between items-center mx-auto h-20 bg-white dark:bg-gray-800">
+        <h2 class="text-2xl font-medium dark:text-white">Rock Paper Game</h2>
+        <div>
+            <i id="go_light" class="cursor-pointer lni lni-sun text-white text-xl font-bold hidden"></i>
+            <i id="go_dark" class="cursor-pointer lni lni-night text-xl font-bold"></i>
+
+        </div>
+    </nav>
+
+
+    <!-- Container Div -->
+
+    <div class="bg-gray-200 dark:bg-gray-700 w-full h-[615px] flex flex-col justify-evenly">
+        <div id="items" class="flex flex-row justify-center items-center gap-10">
+            <div id="rock"
+                class="flex flex-col justify-center items-center w-28 h-28 sm:w-40 lg:w-60 sm:h-40 lg:h-60 rounded-full cursor-pointer border-4 active:border-blue-700 hover:shadow-xl transform duration-300">
+                <img class="w-28 h-28 sm:w-40 lg:w-60 sm:h-40 lg:h-60 object-cover rounded-full" src="./image/rck.jpg"
+                    alt="">
+            </div>
+            <div id="paper"
+                class="flex flex-col justify-center items-center w-28 h-28 sm:w-40 lg:w-60 sm:h-40 lg:h-60 rounded-full cursor-pointer border-4 active:border-gray-700 hover:shadow-xl transform duration-300">
+                <img class="w-28 h-28 sm:w-40 lg:w-60 sm:h-40 lg:h-60 object-cover rounded-full" src="./image/ppr.jpg"
+                    alt="">
+            </div>
+            <div id="sscr"
+                class="flex flex-col justify-center items-center w-28 h-28 sm:w-40 lg:w-60 sm:h-40 lg:h-60 rounded-full cursor-pointer border-4 active:border-gray-700 hover:shadow-xl transform duration-300">
+                <img class="w-28 h-28 sm:w-40 lg:w-60 sm:h-40 lg:h-60 object-cover rounded-full" src="./image/sscr.jpg"
+                    alt="">
+            </div>
+
+        </div>
+        <h2 class="text-4xl font-bold text-center">Score-Card</h2>
+
+
+        <!-- Score-Card -->
+        <div class="flex flex-row justify-center items-center gap-20">
+            <div class="flex flex-col justify-center items-center">
+                <p id="user_score" class="text-4xl font-semibold">0</p>
+                <p class="text-2xl">You</p>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <p id="Computer_score" class="text-4xl font-semibold">0</p>
+                <p class="text-2xl">Computer</p>
+            </div>
+
+        </div>
+        <!-- Score-Card -->
+
+        <h2 id="msg"
+            class="text-center font-semibold text-lg bg-gray-800 p-4 w-60 mx-auto text-white dark:text-gray-800">
+            Play Your Turn</h2>
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
