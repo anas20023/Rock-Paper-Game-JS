@@ -16,9 +16,9 @@ light.addEventListener("click", () => {
 
 /// Main Game Part Starts Here
 
-let win=loose=draw=0;
+let win = (loose = draw = 0);
 
-let MatchResult = (userch) => {
+let MatchResult = (userch, comch) => {
   if (store_Val[comch] === userch) {
     document.querySelector("#msg").innerHTML = "Game Draw ! ";
     draw++;
@@ -62,8 +62,8 @@ let click_User = document.querySelectorAll(".box");
 click_User.forEach((sec) => {
   sec.addEventListener("click", () => {
     let userch = sec.getAttribute("id");
-    let comch=Computerch();
-    MatchResult(userch);
+    let comch = Computerch();
+    MatchResult(userch, comch);
     Display();
   });
 });
@@ -77,24 +77,25 @@ let Computerch = () => {
 // For Messege Display Style Win
 let Winmsg = () => {
   document.getElementById("msg").style.backgroundColor = "green";
+  document.getElementById("msg").style.color = "white";
 };
 // For Messege Display Style Loose
 let Losemsg = () => {
   document.getElementById("msg").style.backgroundColor = "red";
+  document.getElementById("msg").style.color = "white";
 };
 // For Messege Display Style Draw
 let DrawMatch = () => {
   document.getElementById("msg").style.backgroundColor = "#333";
+  document.getElementById("msg").style.color = "white";
 };
 
-
 /// Display Score Value
-let win_d=document.querySelector("#user_score");
-let loose_d=document.querySelector("#Computer_score");
-let draw_d=document.querySelector("#drw");
-let Display=()=>
-{
-  win_d.innerHTML=win;
-  loose_d.innerHTML=loose;
-  draw_d.innerHTML=draw;
-}
+let win_d = document.querySelector("#user_score");
+let loose_d = document.querySelector("#Computer_score");
+let draw_d = document.querySelector("#drw");
+let Display = () => {
+  win_d.innerHTML = win;
+  loose_d.innerHTML = loose;
+  draw_d.innerHTML = draw;
+};
