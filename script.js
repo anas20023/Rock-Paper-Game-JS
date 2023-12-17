@@ -26,31 +26,41 @@ let MatchResult = (userch, comch) => {
   } else {
     if (userch === "sscr") {
       if (store_Val[comch] === "rock") {
-        document.querySelector("#msg").innerHTML = "Computer win";
+        document.querySelector("#msg").innerHTML =
+          "Computer win , Rock Beats Your Scissor";
         loose++;
         Losemsg();
       } else {
-        document.querySelector("#msg").innerHTML = "You Win";
+        document.querySelector("#msg").innerHTML =
+          "You Win , Your Scissor Beats Paper ";
         win++;
         Winmsg();
       }
     } else if (userch === "paper") {
       if (store_Val[comch] === "sscr") {
-        document.querySelector("#msg").innerHTML = "Computer win";
+        document.querySelector("#msg").innerHTML =
+          "Computer win , Scissor Beats Your Paper";
+
         loose++;
         Losemsg();
       } else {
-        document.querySelector("#msg").innerHTML = "You Win";
+        document.querySelector("#msg").innerHTML =
+          "You Win , Your Paper Beats Rock";
+
         win++;
         Winmsg();
       }
     } else if (userch === "rock") {
       if (store_Val[comch] === "paper") {
-        document.querySelector("#msg").innerHTML = "Computer win";
+        document.querySelector("#msg").innerHTML =
+          "Computer win , Paper Beats Your Rock";
+
         loose++;
         Losemsg();
       } else {
-        document.querySelector("#msg").innerHTML = "You Win";
+        document.querySelector("#msg").innerHTML =
+          "You Win , Your Rock Beats Scissor";
+
         win++;
         Winmsg();
       }
